@@ -29,20 +29,5 @@ async function handleSearch() {
 }
 </script>
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline">Nuxt 3 + Prisma + TRPC!</h1>
-    <input
-      v-model="email"
-      class="text-3xl m-3 border rounded-2xl p-3"
-      type="email"
-    />
-    <button
-      class="block text-3xl m-3 p-3 bg-teal-500 rounded-2xl text-white"
-      @click="handleSearch"
-    >
-      Search
-    </button>
-    <p v-if="user" class="text-2xl m-3">Name: {{ user?.name }}</p>
-    <p v-if="user" class="text-2xl m-3">Email: {{ user?.email }}</p>
-  </div>
+  <NuxtPage />
 </template>

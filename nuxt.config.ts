@@ -7,10 +7,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["trpc-nuxt"],
   },
-  modules: [
-    "@nuxt/eslint",
-    //"@prisma/nuxt"
-  ],
+  modules: ["@nuxt/eslint", "@prisma/nuxt"],
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
