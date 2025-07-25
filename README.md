@@ -2,6 +2,8 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+# Checkout feat/better-auth if you need authentication with trpc
+
 ## Setup
 
 Make sure to install dependencies:
