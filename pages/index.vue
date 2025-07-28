@@ -27,7 +27,7 @@ async function queryProtectedProcedure() {
       }
       return;
     }
-    protectedProdTest.value = findByEmail?.email || "No user found";
+    protectedProdTest.value = findByEmail?.value.user.name || "No user found";
   } catch (error) {
     console.error(error);
     protectedProdTest.value = error.message;
@@ -44,7 +44,7 @@ async function queryProtectedProcedure() {
     <p class="mt-4 text-lg text-center text-gray-700">
       This is the default landing page.
     </p>
-    <pre>{{ protectedProdTest }}</pre>
+    <pre v-if="protectedProdTest">{{ `User Name:${protectedProdTest}` }}</pre>
     <div>
       <button
         class="m-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
