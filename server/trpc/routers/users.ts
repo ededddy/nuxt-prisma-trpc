@@ -1,5 +1,9 @@
 import { z } from "zod/v4";
-import { baseProcedure, createTRPCRouter } from "~/server/trpc/init";
+import {
+  baseProcedure,
+  createTRPCRouter,
+  protectedProcedure,
+} from "~/server/trpc/init";
 
 const userRouter = createTRPCRouter({
   first: baseProcedure.query(async ({ ctx }) => {
@@ -10,7 +14,7 @@ const userRouter = createTRPCRouter({
       console.error(e);
     }
   }),
-  findByEmail: baseProcedure
+  findByEmail: protectedProcedure
     .input(
       z.object({
         email: z.string().email(),
